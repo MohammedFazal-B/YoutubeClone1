@@ -7,6 +7,11 @@
     width: 72px;
     z-index: 200;
     padding-top: 5px;
+    transition: width 0.3s;
+  }
+  
+  .sidebar:hover {
+    width: 200px;
   }
   
   .sidebar-link {
@@ -16,17 +21,36 @@
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
   }
   
   .sidebar-link:hover {
-    background-color: rgb(235, 235, 235);
+    background-color: #f2f2f2;
   }
   
   .sidebar-link img {
     height: 24px;
     margin-bottom: 4px;
+    transition: transform 0.2s;
+  }
+  
+  .sidebar-link:hover img {
+    transform: scale(1.1);
   }
   
   .sidebar-link div {
     font-size: 10px;
+    transition: opacity 0.2s;
+  }
+  
+  .sidebar:hover .sidebar-link {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 24px;
+    gap: 24px;
+  }
+  
+  .sidebar:hover .sidebar-link div {
+    font-size: 14px;
   }
